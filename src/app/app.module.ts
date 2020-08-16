@@ -10,6 +10,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -25,6 +26,7 @@ import { PromotionService} from './services/promotion.service';
 import { LeaderService } from './services/leader.service';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -38,6 +40,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     AboutComponent,
     HomeComponent,
     ContactComponent,
+    LoginComponent
+    
   
   ],
   imports: [
@@ -49,8 +53,12 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatDialogModule
     
+  ],
+  entryComponents: [
+    LoginComponent
   ],
   providers: [DishService, PromotionService , LeaderService ],
   bootstrap: [AppComponent]
